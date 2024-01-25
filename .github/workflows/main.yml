@@ -1,1 +1,17 @@
+name: Push to master
 
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    # the checkout action persists the passed credentials by default
+    # subsequent git commands will pick them up automatically
+   
+    - run: |
+        # do something
+        git push
